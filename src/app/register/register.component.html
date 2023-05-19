@@ -1,0 +1,42 @@
+<p class="display-1 text-info text-center">Register</p>
+
+<form [formGroup]="techForm">
+  <!-- radios -->
+  <div class="mb-3">
+    <label>Select a technology</label>
+    <div class="form-check">
+      <input
+        type="radio"
+        formControlName="selectedTechnology"
+        id="js"
+        class="form-check-input"
+        value="javascript"
+        (change)="getUserSelection()"
+      />
+      <label for="js" class="form-check-label">JavaScript</label>
+    </div>
+
+    <div class="form-check">
+      <input
+        type="radio"
+        formControlName="selectedTechnology"
+        id="java"
+        class="form-check-input"
+        value="java"
+        (change)="getUserSelection()"
+      />
+      <label for="java" class="form-check-label">Java</label>
+    </div>
+  </div>
+
+  <div class="mb-3">
+    <label>Select a technology</label>
+    <select class="form-select">
+      <!-- options need to be created dynamically -->
+      <option *ngFor="let tech of userSelectedTechList" value="{{ tech }}">
+        {{ tech }}
+      </option>
+    </select>
+  </div>
+  <!-- select -->
+</form>
