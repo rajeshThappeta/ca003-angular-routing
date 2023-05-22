@@ -1,13 +1,17 @@
 <p class="display-1 text-info text-center">Login</p>
-<p class="lead">
-  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt maiores non
-  eaque quisquam, sapiente placeat accusantium ratione ullam quam natus adipisci
-  fugiat expedita, nam tempore magni. Natus illum molestiae nulla! Harum hic a
-  magnam officia asperiores similique amet voluptate in at! Totam, vero, veniam
-  aliquam dolores placeat, ab voluptatem excepturi blanditiis culpa esse ratione
-  cum vitae iusto perferendis laborum in est voluptas doloribus expedita
-  accusantium quis quod! Rem, architecto eligendi corrupti error quisquam quia
-  recusandae beatae, quo saepe quasi officia. Quasi, harum obcaecati adipisci
-  voluptatem perspiciatis porro, ex in pariatur distinctio quaerat iure aliquam
-  minus doloribus vel omnis quia quod.
-</p>
+
+<form [formGroup]="loginForm" (ngSubmit)="onLogin()">
+  <input
+    type="text"
+    formControlName="username"
+    class="form-control mb-3"
+    placeholder="Username"
+  />
+  <input
+    type="password"
+    formControlName="password"
+    class="form-control mb-3"
+    placeholder="Password"
+  />
+  <button class="btn btn-info" type="submit">Login</button>
+</form>

@@ -13,6 +13,8 @@ import { ReactjsComponent } from './reactjs/reactjs.component';
 import { AngularComponent } from './angular/angular.component';
 import { VueComponent } from './vue/vue.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { UserProfileComponent } from './user-profile/user-profile.component';
+import {HttpClientModule} from '@angular/common/http'
 
 @NgModule({
   declarations: [
@@ -26,12 +28,14 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     ReactjsComponent,
     AngularComponent,
     VueComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    UserProfileComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
